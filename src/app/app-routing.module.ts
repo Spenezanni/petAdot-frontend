@@ -8,6 +8,7 @@ import { UsuarioExtensaoComponent } from './usuario-master/usuario-extensao/usua
 import { ApresentacaoComponent } from './apresentacao/apresentacao.component';
 import { UsuarioAcessoComponent } from './usuario-master/usuario-acesso/usuario-acesso.component';
 import { AnimaisComponent } from './animais/animais.component';
+import { UsuarioCadastroComponent } from './usuario-master/usuario-cadastro/usuario-cadastro.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent } ,
@@ -18,10 +19,11 @@ const routes: Routes = [
   { path: 'cadastroAnimais', component: AnimaisComponent},
   { path: 'quemSomos', component: ApresentacaoComponent },
   { path: 'cadastroAcesso', component: UsuarioAcessoComponent },
+  { path: 'usuarioCadastroFunc', component: UsuarioCadastroComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
