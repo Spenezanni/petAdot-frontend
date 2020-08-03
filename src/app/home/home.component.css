@@ -1,0 +1,13 @@
+.jumbotron{
+    margin-top: 10px;
+    background:rgb(141, 48, 235);
+    color:white;
+}
+
+.display-3 {
+text-align: center;
+}
+
+.jumbotron p{
+text-align: center;
+}

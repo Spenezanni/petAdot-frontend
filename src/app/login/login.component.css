@@ -1,0 +1,13 @@
+.jumbotron{
+    margin-top: 80px;
+    width: 500px;
+    height: 400px;
+    margin-left: 20%;
+}
+.form-signin{
+    padding: 30px;
+
+}
+.container{
+    padding: 10px;
+}
