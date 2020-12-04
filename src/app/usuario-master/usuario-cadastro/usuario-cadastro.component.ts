@@ -18,6 +18,7 @@ export class UsuarioCadastroComponent implements OnInit {
   form: FormGroup;
   submitted = false;
   location: any;
+  
 
   constructor(
      private usuarioCadastroService: UsuarioCadastroService,
@@ -26,17 +27,26 @@ export class UsuarioCadastroComponent implements OnInit {
      private route: ActivatedRoute ) { }
 
   ngOnInit() {
-    const usuarioCadastro = this.route.snapshot.data['usuarioCadastro'];
+    //const usuarioCadastro = this.route.snapshot.data['usuarioCadastro'];
 
     //part configurer the form
-    this.form = this.fb.group({
-      nome_Usuario: [usuarioCadastro.nome_Usuario,[Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
-      senha_Usuario: [usuarioCadastro.senha_Usuario, [Validators.required, Validators.minLength(6), Validators.maxLength(20)]],
-      ds_Email: [usuarioCadastro.ds_Email, [Validators.required, Validators.minLength(10), Validators.maxLength(100)]],
-      cpf_Usuario: [usuarioCadastro.cpf_Usuario, [Validators.required, Validators.minLength(9), Validators.maxLength(9)]]
-  });
+      this.form = this.fb.group({
+      nomeUsuario: [null],
+      senhaUsuario: [null],
+      dsEmail: [null],
+      cpfUsuario: [null]
+  }); 
+
+/*   const produto = this.route.snapshot.data['produto'];
+
+  //part configurer the form
+  this.form = this.fb.group({
+    id: [produto.id],
+    descricao: [produto.descricao, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+    codfabricante: [produto.codfabricante, [Validators.required, Validators.minLength(3), Validators.maxLength(250)]]
+  }); */
   }
-  onSubmit() {
+/*   onSubmit() {
     this.submitted = true;
     console.log(this.form.value);
     if (this.form.valid) {
@@ -61,15 +71,24 @@ export class UsuarioCadastroComponent implements OnInit {
         );
       }
     }
-  }
+  } */
 
-  hasError(field: string) {
+  onSubmit(){
+    this.submitted = true;
+    console.log(this.form.value);
+    if (this.form.valid) {
+      console.log('submit');
+      this.usuarioCadastroService.create(this.form.value).subscribe();
+  }
+}
+
+ /*  hasError(field: string) {
     return this.form.get(field).errors;
-  }
+  } */
 
-  onCancel() {
+ /*  onCancel() {
     this.submitted = false;
     this.form.reset();
     //console.log('onCancel');
-  }
+  } */
 }

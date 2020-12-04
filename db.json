@@ -1,0 +1,18 @@
+{
+  "usuario": [
+    {
+      "nomeUsuario": "Luiz Gustavo",
+      "senhaUsuario": "123",
+      "dsEmail": "gustavospenezanni@gmail.com",
+      "cpfUsuario": "5855585558585",
+      "id": 1
+    },
+    {
+      "nomeUsuario": "Luiz Gustavo",
+      "senhaUsuario": "123",
+      "dsEmail": "gustavospenezanni@gmail.com",
+      "cpfUsuario": "5855585558585",
+      "id": 2
+    }
+  ]
+}

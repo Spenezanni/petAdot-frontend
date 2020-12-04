@@ -9,7 +9,7 @@ import { take } from 'rxjs/operators';
 })
 export class UsuarioCadastroService {
 
-  private readonly API = `${environment.API}usuarioCadastro`;
+  private readonly API = `${environment.API}usuario`;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -19,8 +19,8 @@ export class UsuarioCadastroService {
     .pipe(take(1));
   }
 
-  update(usuarioCadastro){
+ /*  update(usuarioCadastro){
     return this.http.put(`${this.API}/${usuarioCadastro.id}`, usuarioCadastro)
     .pipe(take(1));
-  }
+  } */
 }

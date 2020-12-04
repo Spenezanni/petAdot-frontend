@@ -1,30 +1,30 @@
-<div class="jumbotron border border-primary">
-    <form class="needs-validation" [formGroup]="form">
+<div class="jumbotron border border-primary" >
+    <form class="needs-validation" [formGroup]="form" (ngSubmit)="onSubmit()">
 
         <div class="form-group">
-            <label for="nome_Usuario">Nome Usuário</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira o seu nome completo"
-                formControlName="nome_Usuario">
+            <label for="nomeUsuario">Nome Usuário</label>
+            <input type="text" class="form-control" id="nomeUsuario" placeholder="Insira o seu nome completo"
+                formControlName="nomeUsuario"/>
         </div>
         <div class="form-group">
-            <label for="senha_Usuario">Senha Usuário</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira a sua senha"
-                formControlName="senha_Usuario">
+            <label for="senhaUsuario">Senha Usuário</label>
+            <input type="password" class="form-control" id="senhaUsuario" placeholder="Insira a sua senha"
+                formControlName="senhaUsuario"/>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <div class="form-group">
-                    <label for="cpf_Usuario">CPF</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Insira o CPF "
-                        formControlName="cpf_Usuario">
+                   <label for="cpfUsuario">CPF</label>
+                    <input type="text" class="form-control" id="cpfUsuario" placeholder="Insira o CPF "
+                        formControlName="cpfUsuario"/>
                 </div>
-            </div>
+            </div> 
         </div>
         <div class="form-group">
-            <label for="ds_Email">E-mail</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira o seu E-mail"
-                formControlName="ds_Email">
+            <label for="dsEmail">E-mail</label>
+            <input type="email" class="form-control" id="dsEmail" placeholder="nome@email.com"
+                formControlName="dsEmail"/>
         </div>
         
         <div>

@@ -19,6 +19,7 @@ import { UsuarioMasterComponent } from './usuario-master/usuario-master.componen
 import { AnimaisComponent } from './animais/animais.component';
 import { UsuarioCadastroComponent } from './usuario-master/usuario-cadastro/usuario-cadastro.component';
 import { UsuarioComponent } from './usuario-master/usuario/usuario.component';
+import { UsuarioCadastroService } from './usuario-master/usuario-cadastro/usuario-cadastro.service';
 
 
 @NgModule({
@@ -35,12 +36,13 @@ import { UsuarioComponent } from './usuario-master/usuario/usuario.component';
     UsuarioComponent
   ],
   imports: [
-  BrowserModule,
+    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule, 
   ],
-  providers: [LoginService],
+  providers: [LoginService, UsuarioCadastroService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
