@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "proj-adocao"
+    }
+  },
+  "defaultProject": "proj-adocao",
+  "cli": {
+    "analytics": "7e604d21-7e75-4735-824b-9cbe37c297d7"
+  }
 }

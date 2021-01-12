@@ -1,15 +1,14 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from './usuario';
-
+import { Usuario } from '../../homelogin/usuario';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class AuthService {
 
   private usuarioAutenticado: boolean = false;
-
+  
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
   constructor(private router: Router) { }
@@ -19,11 +18,18 @@ export class LoginService {
     if (usuario.nome == 'user' && usuario.senha == '123') {
       this.usuarioAutenticado = true;
       this.mostrarMenuEmitter.emit(true);
-      this.router.navigate(['/']);
+      this.router.navigate(['/home']);
     } else {
       this.usuarioAutenticado = false;
       this.mostrarMenuEmitter.emit(false);
-      this.router.navigate(['/']);
+      alert('Usuario ou senha errados!')
+      this.router.navigate(['/login']);
     }
   }
+
+  usuarioEstaAutenticado(){
+        return this.usuarioAutenticado;
+  }
+
+
 }
