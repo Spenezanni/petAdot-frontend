@@ -19,6 +19,7 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 const routes: Routes = [
   { path: '', component: SigninComponent} ,
   { path: 'home', component: HomeComponent,canActivate: [AuthGuard]} ,
+  { path: 'home/:usuarioNome', component: HomeComponent,canActivate: [AuthGuard]} ,
   { path: 'login', component: SigninComponent},
   { path: 'cadastroUsuario', component: UsuarioComponent, canActivate: [AuthGuard]},
   { path: 'cadastroExtensao', component: UsuarioExtensaoComponent, canActivate: [AuthGuard]},

@@ -25,6 +25,7 @@ import { CoreModule } from './core/core.module';
 import { GraficosModule } from './graficos/graficos.module';
 import { PhotosModule } from './photos/photos.module';
 import { ErrorsModule } from './errors/errors.module';
+import { CardComponent } from './shared/components/card/card.component';
 
 
 @NgModule({
