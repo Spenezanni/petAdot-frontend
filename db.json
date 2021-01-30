@@ -14,5 +14,21 @@
       "cpfUsuario": "5855585558585",
       "id": 2
     }
+  ],
+  "pet": [
+    {
+      "nome": "Dolly",
+      "descricao": "docil",
+      "porte": "medio",
+      "idade": "5 anos",
+      "raca": "labrador"
+    },
+    {
+      "nome": "Maik",
+      "descricao": "docil",
+      "porte": "medio",
+      "idade": "2 anos",
+      "raca": "Misturado"
+    }
   ]
 }

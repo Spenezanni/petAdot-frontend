@@ -6,6 +6,9 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
 import { PhotoFormComponent } from './photo-form/photo-form.component';
 import { PhotosComponent } from './photo-list/photos/photos.component';
 import { CardModule } from '../shared/components/card/card.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VmessageModule } from '../shared/components/vmessage/vmessage.module';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CardModule } from '../shared/components/card/card.module';
 
   imports: [
     CommonModule,
-    CardModule
+    CardModule,
+    ReactiveFormsModule,
+    FormsModule,
+    VmessageModule
   ]
 })
 export class PhotosModule { }

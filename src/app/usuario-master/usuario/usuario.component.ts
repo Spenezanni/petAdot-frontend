@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,6 +9,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class UsuarioComponent implements OnInit {
 
+  form: FormGroup;
+
   constructor(private router :Router) { }
 
   ngOnInit() {
@@ -15,6 +18,10 @@ export class UsuarioComponent implements OnInit {
 
   onSubmit(){
     this.router.navigate(['cadastroExtensao']);
+  }
+
+  onBack(){
+    this.router.navigate(['home']);
   }
 
 }

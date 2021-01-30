@@ -1,0 +1,15 @@
+<div class="jumbotron border border-primary">
+    <form class="needs-validation" [formGroup]="form">
+
+        <div class="form-group">
+            <label for="nome_usu">Matrícula do Pet</label>
+            <input type="text" class="form-control" id="id_pet" placeholder="Insira a matrícula do Pet"
+                formControlName="id_pet">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" style="margin-right: 15px" (click)="onSubmit()">Salvar</button>
+            <button type="button" class="btn btn-primary" style="margin-right: 15px" (click)="onCancel()">Cancelar</button>
+            <button type="submit" class="btn btn-primary" style="margin-right: 15px" (click)="onBack()">Voltar</button>
+        </div>
+    </form>
+</div>

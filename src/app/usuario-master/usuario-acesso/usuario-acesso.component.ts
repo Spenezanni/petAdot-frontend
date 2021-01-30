@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,6 +8,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./usuario-acesso.component.css']
 })
 export class UsuarioAcessoComponent implements OnInit {
+
+  form: FormGroup;
 
   constructor(private router: Router) { }
 

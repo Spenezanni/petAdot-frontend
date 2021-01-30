@@ -5,7 +5,7 @@
             <div class="form-group col-md-6">
                 <label for="nome_usu">Nome do Pet</label>
                 <input type="text" class="form-control" id="formGroupExampleInput"
-                    placeholder="Insira o seu nome do Pet" formControlName="nome_usu">
+                    placeholder="Insira o nome do Pet" formControlName="nome_usu">
             </div>
             <div class="form-group col-md-4 ">
                 <label for="data_ini">Idade do Pet</label>
@@ -128,8 +128,12 @@
         </div>
         <br>
         <div class="form-group">
-            <label for="exampleFormControlFile1">Insira uma foto do Pet</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            <label for="file">Insira uma foto do Pet</label>
+            <input type="file" 
+            class="form-control-file" 
+            id="file"
+            accept="image/*"
+            (change)="file = $event.target.files[0]">
         </div>
 
 
