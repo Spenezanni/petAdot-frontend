@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VmessageComponent } from './components/vmessage/vmessage.component';
-
+import { AlertComponent } from './alert.component';
 
 @NgModule({
   declarations: [
-
+    AlertComponent
   ],
+  exports:[AlertComponent],
   imports: [
-    CommonModule,
-    
+    CommonModule
   ]
 })
-export class SharedModule { }
+export class AlertModule { }

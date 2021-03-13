@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Photo } from './photo/photo';
 
 const API = 'http://localhost:3000';
 
@@ -21,7 +22,11 @@ export class PhotoService {
 
     return this.http.post(API + '/photos/upload', formData);
 
+  }
 
+  listFromUser(userName: string) {
+    console.log("entrei no serviço");
+    return this.http.get<Photo[]>(API + '/flavio/photos')
   }
 
 }

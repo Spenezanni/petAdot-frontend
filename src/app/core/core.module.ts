@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { AlertModule } from '../shared/alert/alert.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
     ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    AlertModule
   ]
 })
 export class CoreModule { }

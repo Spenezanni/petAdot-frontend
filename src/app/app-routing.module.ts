@@ -18,6 +18,7 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PetAtualizarComponent } from './pets/pet-atualizar/pet-atualizar.component';
 import { PetAtualizarDescComponent } from './pets/pet-atualizar-desc/pet-atualizar-desc.component';
+import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 
 const routes: Routes = [
   { path: '', component: SigninComponent} ,
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: 'pet-cadastro', component: PetComponent, canActivate: [AuthGuard]},
   { path: 'pet-atualizar', component: PetAtualizarComponent, canActivate: [AuthGuard]},
   { path: 'pet-atualizar-desc', component: PetAtualizarDescComponent, canActivate: [AuthGuard]},
-  { path: 'quemSomos', component: ApresentacaoComponent, canActivate: [AuthGuard]},
+  { path: 'pet-lista', component: PhotoListComponent, canActivate: [AuthGuard]},
+  { path: 'quemSomos', component: ApresentacaoComponent, canActivate: [AuthGuard]}, 
   { path: 'cadastroAcesso', component: UsuarioAcessoComponent, canActivate: [AuthGuard] },
   { path: 'usuarioCadastroFunc', component: UsuarioCadastroComponent, canActivate: [AuthGuard]},
   { path: 'graficoPrincipal', component: RelatorioPrincipalComponent, canActivate: [AuthGuard]},
