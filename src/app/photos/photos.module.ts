@@ -8,6 +8,7 @@ import { PhotosComponent } from './photo-list/photos/photos.component';
 import { CardModule } from '../shared/components/card/card.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VmessageModule } from '../shared/components/vmessage/vmessage.module';
+import { LoadButtomComponent } from './photo-list/load-buttom/load-buttom.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { VmessageModule } from '../shared/components/vmessage/vmessage.module';
     PhotoComponent,
     PhotoListComponent,
     PhotoFormComponent,
-    PhotosComponent],
+    PhotosComponent,
+    LoadButtomComponent],
   exports: [PhotoComponent],
 
   imports: [

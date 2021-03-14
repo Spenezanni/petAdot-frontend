@@ -1,1 +1,13 @@
-<app-photos [photos]="photos" ></app-photos>
+<div class="text-center mt-3 mb-3">
+    <form>
+        <i class="fa fa-search mr-2"></i>
+        <input 
+            class="rounded" 
+            type="search" 
+            placeholder="search..." 
+            autofocus>
+    </form>
+</div>
+
+<app-photos [photos]="photos"></app-photos>
+<app-load-buttom></app-load-buttom>
