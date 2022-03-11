@@ -1,0 +1,54 @@
+<div class="jumbotron border border-primary">
+    <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Endereço do Usuário </div>
+<div class="jumbotron border border-primary">
+    <form class="needs-validation" [formGroup]="formEndereco">
+<div class="form-row">
+    <div class="form-group  col-md-6">
+        <label for="rua">Logradouro</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Insira a Rua"
+            formControlName="rua">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="numero">Numero</label>
+        <input type="text" class="form-control" id="inputCity" formControlName="numero">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="cidade">Cidade</label>
+        <input type="text" class="form-control" id="inputCity" formControlName="cidade">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="bairro">Bairro</label>
+        <input type="text" class="form-control" id="inputCity" formControlName="bairro">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="estado">Estado</label>
+        <select id="inputEstado" class="form-control" formControlName="estado">
+            <option selected>Escolher...</option>
+            <option>São Paulo</option>
+            <option>Minas Gerais</option>
+            <option>Rio de Janeiro</option>
+        </select>
+    </div>
+    <div class="form-group col-md-4">
+        <label for="pais">País</label>
+        <select id="pais" class="form-control" formControlName="pais">
+            <option selected>Escolher...</option>
+            <option>Brasil</option>
+            <option>Portugal</option>
+            <option>China</option>
+        </select>
+    </div>
+    <div class="form-group col-md-4">
+        <label for="cep">CEP</label>
+        <input type="text" class="form-control" id="inputCEP" formControlName="cep">
+    </div>
+</div>
+<div>
+    <button type="submit" class="btn btn-primary" style="margin-right: 15px" (click)="onNext()">Próximo</button>
+    <button type="submit" class="btn btn-primary" style="margin-right: 15px" (click)="onBack()">Voltar</button>
+</div>
+    </form>
+    </div>
+</div>

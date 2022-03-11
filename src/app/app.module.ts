@@ -18,11 +18,14 @@ import { HomeModule } from './home/home.module';
 import { UsuarioMasterModule } from './usuario-master/usuario-master.module';
 import { ApresentacaoComponent } from './apresentacao/apresentacao.component';
 import { PetsModule } from './pets/pets.module';
+import { PortalModule } from './portais/portal.module';
+import { UserModule } from './user-fase2/user.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ApresentacaoComponent,
+    ApresentacaoComponent
     
   ],
   imports: [
@@ -38,7 +41,9 @@ import { PetsModule } from './pets/pets.module';
     GraficosModule,
     PhotosModule,
     ErrorsModule,
-    HomeModule
+    HomeModule,
+    PortalModule,
+    UserModule
   ],
   providers: [
     UsuarioCadastroService,

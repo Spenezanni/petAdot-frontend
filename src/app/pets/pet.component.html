@@ -1,130 +1,107 @@
 <div class="jumbotron border border-primary">
+<div class="alert alert-primary text-center h1 border border-primary" role="alert"> Pet Adot Cadastro </div>
+<div class="jumbotron border border-primary">
     <form class="needs-validation" [formGroup]="form">
 
         <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="nome_usu">Nome do Pet</label>
-                <input type="text" class="form-control" id="formGroupExampleInput"
-                    placeholder="Insira o nome do Pet" formControlName="nome_usu">
+            <div class="form-group col-md-6 pt-0">
+                <label for="nomeUsu">Nome do Pet</label>
+                <input type="text" class="form-control" id="nomeUsu"
+                    placeholder="Insira o nome do Pet" formControlName="nomeUsu">
             </div>
-            <div class="form-group col-md-4 ">
-                <label for="data_ini">Idade do Pet</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira a idade do Pet"
-                    formControlName="idade_pet">
+            <div class="form-group col-md-4 pt-0">
+                <label for="idadePet">Idade do Pet</label>
+                <input type="text" class="form-control" id="idadePet" placeholder="Insira a idade do Pet"
+                    formControlName="idadePet">
             </div>
         </div>
+        <br>  
+        <legend class="col-form-label col-sm-2 pt-0" [ngClass]="('sexo')">Sexo: </legend>
+        <div class="form-check"  id="sexo" *ngFor="let item of sexoOp" >
+            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="sexo"  
+            checked>
+            <label class="form-check-label" for="sexo" >
+                {{item.desc}}
+            </label>
+    </div> 
         <br>
-
-        <legend class="col-form-label col-sm-2 pt-0">Sexo: </legend>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
+        <legend class="col-form-label col-sm-2 pt-0">Especie: </legend>
+        <div class="form-check" id="especie" *ngFor="let item of especieOp">
+            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="especie" 
                 checked>
-            <label class="form-check-label" for="exampleRadios1">
-                Fêmea
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-            <label class="form-check-label" for="exampleRadios2">
-                Macho
-            </label>
-        </div>
-        <br>
-        <legend class="col-form-label col-sm-2 pt-0">Porte: </legend>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
-                checked>
-            <label class="form-check-label" for="exampleRadios1">
-                Pequeno
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-            <label class="form-check-label" for="exampleRadios2">
-                Médio
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-            <label class="form-check-label" for="exampleRadios2">
-                Grande
-            </label>
-        </div>
-        <br>
-        <legend class="col-form-label col-sm-2 pt-0">Filhote: </legend>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
-                checked>
-            <label class="form-check-label" for="exampleRadios1">
-                Sim
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-            <label class="form-check-label" for="exampleRadios2">
-                Não
-            </label>
-        </div>
-        <br>
-        <legend class="col-form-label col-sm-4 pt-0">Carteira de Vacinação: </legend>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
-                checked>
-            <label class="form-check-label" for="exampleRadios1">
-                Sim
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-            <label class="form-check-label" for="exampleRadios2">
-                Não
-            </label>
-        </div>
-        <br>
-        <legend class="col-form-label col-sm-2 pt-0">Castrado: </legend>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
-                checked>
-            <label class="form-check-label" for="exampleRadios1">
-                Sim
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-            <label class="form-check-label" for="exampleRadios2">
-                Não
-            </label>
-        </div>
-        <br>
-        <legend class="col-form-label col-sm-2 pt-0">Vermifugado: </legend>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
-                checked>
-            <label class="form-check-label" for="exampleRadios1">
-                Sim
+            <label class="form-check-label" for="especie">
+                {{item.desc}}
             </label>
             <br>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-            <label class="form-check-label" for="exampleRadios2">
-                Não
+        <br>
+        <legend class="col-form-label col-sm-2 pt-0">Porte: </legend>
+        <div class="form-check" *ngFor="let item of porteOp">
+            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="porte" id="porte" 
+                checked>
+            <label class="form-check-label" for="porte">
+                {{item.desc}}
             </label>
         </div>
         <br>
-        <legend class="col-form-label col-sm-2 pt-0">Em situação de rua: </legend>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
+        <legend class="col-form-label col-sm-2 pt-0">Pelagem Tamanho: </legend>
+        <div class="form-check" *ngFor="let item of pelagemTamanhoOp">
+            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="pelagemTamanho" id="pelagemTamanho" 
                 checked>
-            <label class="form-check-label" for="exampleRadios1">
-                Sim
+            <label class="form-check-label" for="pelagemTamanho">
+                {{item.desc}}
             </label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-            <label class="form-check-label" for="exampleRadios2">
-                Não
+        <br>
+        <legend class="col-form-label col-sm-2 pt-0">Pelagem Cor: </legend>
+        <div class="form-check" *ngFor="let item of pelagemCorOp">
+            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="pelagemCor" id="pelagemCor" 
+                checked>
+            <label class="form-check-label" for="exampleRadios1">
+                {{item.desc}}
             </label>
+        </div>
+        <br>
+        
+        <legend class="col-form-label col-sm-2 pt-0 ">Castrado: </legend>
+        <div class="form-check" *ngFor="let item of castradoOp">
+            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="castrado" id="castrado" 
+                checked>
+            <label class="form-check-label" for="castrado">
+                {{item.desc}}
+            </label>
+        </div>
+        <br>
+
+        <legend class="col-form-label col-sm-2 pt-0">Vermifugado: </legend>
+        <div class="form-check" *ngFor="let item of vermificadoOp">
+            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="vermificado" id="vermificado"
+                checked>
+            <label class="form-check-label" for="vermificado">
+                {{item.desc}}
+            </label>
+            <br>
+        </div>
+        <br>
+
+        <legend class="col-form-label col-sm-2 pt-0">Status da Adoção: </legend>
+        <div class="form-check" *ngFor="let item of statusAdocaoOp">
+            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="statusAdocao" id="statusAdocao"
+                checked>
+            <label class="form-check-label" for="statusAdocao">
+                {{item.desc}}
+            </label>
+            <br>
+        </div>
+        <br>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nome_usu">Observação condição de saúde</label>
+                <input type="text" class="form-control" id="formGroupExampleInput"
+                    placeholder="Insira condições de saúde" formControlName="cond_saude">
+            </div>
+       
         </div>
         <br>
         <div class="form-group">
@@ -144,4 +121,5 @@
                 (click)="onCancel()">Cancelar</button>
         </div>
     </form>
+</div>
 </div>
