@@ -18,10 +18,12 @@ import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PetAtualizarComponent } from './pets/pet-atualizar/pet-atualizar.component';
 import { PetAtualizarDescComponent } from './pets/pet-atualizar-desc/pet-atualizar-desc.component';
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
+import { UserComponent } from './user-adot/user/user.component';
+import { UserAdotComponent } from './user-adot/user-adot/user-adot.component';
 import { PortalComponent } from './portais/portal/portal.component';
-import { UserComponent } from './user-fase2/user/user.component';
-import { EnderecoComponent } from './user-fase2/endereco/endereco.component';
-import { UserAdotComponent } from './user-fase2/user-adot/user-adot.component';
+import { EnderecoComponent } from './user-adot/endereco-user-adot/endereco.component';
+import { UserFuncComponent } from './user-func/user-func/user-func.component';
+
 
 
 const routes: Routes = [
@@ -40,12 +42,20 @@ const routes: Routes = [
   { path: 'usuarioCadastroFunc', component: UsuarioCadastroComponent },
   { path: 'graficoPrincipal', component: RelatorioPrincipalComponent },
   { path: 'graficoAdocao', component: GraficoAdocaoComponent },
+
+  { path: 'portal', component: PortalComponent },
+
+  { path: 'user', component: UserComponent },
+
+  { path: 'user-adot', component: UserAdotComponent },
+  { path: 'endereco', component: EnderecoComponent },
+
+  { path: 'user-func', component: UserFuncComponent },
+  { path: 'endereco-func', component: EnderecoComponent },
+  { path: 'user-func-comp', component: UserFuncComponent },
+
   { path: 'graficoAnalise', component: GraficoAnaliseComponent },
   { path: 'add', component: PhotoFormComponent },
-  { path: 'portal', component: PortalComponent },
-  { path: 'user', component: UserComponent },
-  { path: 'endereco', component: EnderecoComponent },
-  { path: 'user-adot', component: UserAdotComponent },
   { path: '**', component: NotFoundComponent }
   
 ];  

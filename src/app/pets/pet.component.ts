@@ -41,12 +41,14 @@ export class PetComponent implements OnInit {
       sexo: [null],
       nomeUsu: [null],
       especie: [null],
+      idadePet: [null],
       porte: [null],
       pelagemTamanho: [null],
       pelagemCor: [null],
       castrado: [null],  
       vermificado: [null],
-      statusAdocao: [null]
+      statusAdocao: [null],
+      condSaude: [null]
     })
   }
 
