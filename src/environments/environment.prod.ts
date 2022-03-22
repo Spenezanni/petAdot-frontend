@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  API: 'http://localhost:8080/',
-  DB_JSON: 'http://petadot.herokuapp.com/',
+  API: 'http://petadot.herokuapp.com/',
+  DB_JSON: 'http://localhost:3000/',
   BASE_URL: '/api'
 };

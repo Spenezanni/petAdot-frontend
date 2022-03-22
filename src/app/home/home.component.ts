@@ -13,9 +13,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
 
-  private redirecionarAdotador(): void {
-    this.router.navigate(['cadastroUsuario']);
-
+  onNext(){
+    this.router.navigate(['/user']);
   }
 
 }
