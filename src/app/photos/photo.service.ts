@@ -1,5 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Photo } from './photo/photo';
 
 const API = '/api';
@@ -24,10 +25,17 @@ export class PhotoService {
 
   }
 
-  listFromUser(userName: string) {
+  listFromUser() {
     console.log("entrei no serviço");
-    return this.http.get<Photo[]>(API + '/petAdot')
+    return this.http.get<Photo[]>(environment.API + 'petAdot')
   }
+
+
+  listFromId() {
+    console.log("entrei no serviço");
+    return this.http.get<Photo[]>(environment.API + 'petAdot' )
+  }
+
 
   listFromUserPaginated(userName: string, page: number) {
     const params = new HttpParams().append('page', page.toString());

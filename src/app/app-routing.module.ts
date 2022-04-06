@@ -23,7 +23,9 @@ import { UserAdotComponent } from './user-adot/user-adot/user-adot.component';
 import { PortalComponent } from './portais/portal/portal.component';
 import { EnderecoComponent } from './user-adot/endereco-user-adot/endereco.component';
 import { UserFuncComponent } from './user-func/user-func/user-func.component';
-
+import { PetTableComponent } from './pets/pet-table/pet-table.component';
+import { PetUnicComponent } from './pets/pet-unic/pet-unic.component';
+import { PetDoacaoComponent } from './pets/pet-doacao/pet-doacao.component';
 
 
 const routes: Routes = [
@@ -37,6 +39,7 @@ const routes: Routes = [
   { path: 'pet-atualizar', component: PetAtualizarComponent },
   { path: 'pet-atualizar-desc', component: PetAtualizarDescComponent },
   { path: 'pet-lista', component: PhotoListComponent },
+  { path: 'doacao-pet', component: PetDoacaoComponent },
   { path: 'quemSomos', component: ApresentacaoComponent }, 
   { path: 'cadastroAcesso', component: UsuarioAcessoComponent },
   { path: 'usuarioCadastroFunc', component: UsuarioCadastroComponent },
@@ -53,9 +56,12 @@ const routes: Routes = [
   { path: 'user-func', component: UserFuncComponent },
   { path: 'endereco-func', component: EnderecoComponent },
   { path: 'user-func-comp', component: UserFuncComponent },
-
+  { path: 'pet-table', component: PetTableComponent },
   { path: 'graficoAnalise', component: GraficoAnaliseComponent },
   { path: 'add', component: PhotoFormComponent },
+
+  {path: 'pet-table/detalhe/:id', component: PetUnicComponent},
+
   { path: '**', component: NotFoundComponent }
   
 ];  

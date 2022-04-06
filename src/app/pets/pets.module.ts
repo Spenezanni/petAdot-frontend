@@ -5,17 +5,26 @@ import { PetAtualizarComponent } from './pet-atualizar/pet-atualizar.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PetAtualizarDescComponent } from './pet-atualizar-desc/pet-atualizar-desc.component';
 import { PetsService } from './pets.service';
+import { PhotosModule } from '../photos/photos.module';
+import { PetDoacaoComponent } from './pet-doacao/pet-doacao.component';
+import { RouterModule } from '@angular/router';
+import { LoginFakeComponent } from './pet-doacao/login-fake/login-fake.component';
+
+
 
 @NgModule({
   declarations: [
     PetComponent,
     PetAtualizarComponent,
-    PetAtualizarDescComponent
+    PetAtualizarDescComponent,
+    PetDoacaoComponent,
+    LoginFakeComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [PetsService]
 })

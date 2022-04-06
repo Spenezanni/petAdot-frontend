@@ -16,9 +16,10 @@ export class PhotoListComponent implements OnInit {
 
   ngOnInit() {
 
-    this.photoService.listFromUser('flavio')
+    this.photoService.listFromUser()
     .subscribe(photos => this.photos = photos);
     console.log(this.photos);
   }
+
 
 }

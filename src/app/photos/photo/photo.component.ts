@@ -11,7 +11,10 @@ export class PhotoComponent implements OnInit {
 
   private _url = '';
 
-  @Input() description = '';
+  @Input() nome = '';
+  @Input() sexo = '';
+  @Input() porte = '';
+  @Input() idade = '';
   @Input() set url(url: string) {
     if (!url.startsWith('data')) {
       this._url = CLOUD + url;

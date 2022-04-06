@@ -1,11 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { take } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
+import { Photo } from '../photos/photo/photo';
+import { PetAdot } from './petAdot';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PetsService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getSexo(){
     return [
@@ -65,5 +70,13 @@ export class PetsService {
       { valor: 'ADOTADO', desc:'Adotado'},
       { valor: 'NAO_ADOTADO', desc:'Não Adotado'}
     ];
+  }
+
+  createPet(petAdot){
+    return this.http.post(environment.API + 'petAdot', petAdot).pipe(take(1));
+  }
+
+  loadPetById(id){
+    return this.http.get<Photo>(`${environment.API}petAdot/${id}`).pipe(take(1)); 
   }
 }

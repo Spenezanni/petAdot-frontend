@@ -19,10 +19,8 @@ import { UsuarioMasterModule } from './usuario-master/usuario-master.module';
 import { ApresentacaoComponent } from './apresentacao/apresentacao.component';
 import { PetsModule } from './pets/pets.module';
 import { PortalModule } from './portais/portal.module';
-import { EnderecoFuncComponent } from './user-func/endereco-func/endereco-func.component';
 import { UserModule } from './user-adot/user.module';
 import { UserFuncModule } from './user-func/user-func.module';
-
 
 @NgModule({
   declarations: [

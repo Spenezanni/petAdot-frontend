@@ -1,12 +1,50 @@
+
+<div class="jumbotron border border-primary">
+    <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Pet Adot </div>
+    <form class="needs-validation" [formGroup]="pesquisa">
+<div class="form-row">
+    <div class="form-group col-md-4">
+        <label for="especie">Espécie</label>
+        <select id="especie" class="form-control" formControlName="especie">
+            <option selected>Escolher...</option>
+            <option>Canino</option>
+            <option>Felino</option>
+        </select>
+    </div>
+    <div class="form-group col-md-4">
+        <label for="sexo">Sexo</label>
+        <select id="sexo" class="form-control" formControlName="sexo">
+            <option selected>Escolher...</option>
+            <option>Macho</option>
+            <option>Fêmea</option>
+        </select>
+    </div>
+    <div class="form-group col-md-4">
+        <label for="idade">Idade</label>
+        <select id="idade" class="form-control" formControlName="idade">
+            <option selected>Escolher...</option>
+            <option>1 à 2 anos</option>
+            <option>2 à 4 anos</option>
+            <option>4 à 10 anos</option>
+            <option>mais de 10 anos</option>
+        </select>
+    </div>
+    </div>
+<div>
+    <button type="submit" class="btn btn-primary" style="margin-right: 15px" (click)="onSearch()">Pesquisar</button></div>
+    <br>
+    </form>
 <ol class="list-unstyled">
     <li *ngFor="let cols of rows" class="row">
         <div *ngFor="let photo of cols" class="col-4">
     <app-photo
-        [url]="photo.imagem"
-        [description]="photo.description">
+        [url]="'data:image/JPEG;base64,'+photo.imagem"
+        [nome]="photo.nome"
+        [sexo]="photo.sexo"
+        [porte]="photo.porte"
+        [idade]="photo.idade">
     </app-photo>
 </div>
     </li>   
     </ol>
-    
-    
+</div>
