@@ -27,7 +27,8 @@ export class PhotosComponent implements OnChanges {
       this.pesquisa = this.formBuilder.group({
         sexo: [null],
         especie: [null],
-        idade: [null]
+        idade: [null],
+        id: [null]
       })
   }
   

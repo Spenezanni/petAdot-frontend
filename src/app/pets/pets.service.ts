@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { take } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
@@ -72,8 +72,14 @@ export class PetsService {
     ];
   }
 
-  createPet(petAdot){
-    return this.http.post(environment.API + 'petAdot', petAdot).pipe(take(1));
+  createPet(formData){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'multipart/form-data; charset=utf-8'
+      })
+    };
+    return this.http.post(environment.API + 'petAdot/create-pet-adot', formData).pipe(take(1));
+
   }
 
   loadPetById(id){

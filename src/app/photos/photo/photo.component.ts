@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PetsService } from 'dist/app/pets/pets.service';
+import { Photo } from './photo';
 
 const CLOUD = "http://4200/imgs/";
 
@@ -9,12 +12,15 @@ const CLOUD = "http://4200/imgs/";
 })
 export class PhotoComponent implements OnInit {
 
+  photo: Photo;
+
   private _url = '';
 
   @Input() nome = '';
   @Input() sexo = '';
   @Input() porte = '';
   @Input() idade = '';
+  @Input() id = '';
   @Input() set url(url: string) {
     if (!url.startsWith('data')) {
       this._url = CLOUD + url;
@@ -27,9 +33,16 @@ export class PhotoComponent implements OnInit {
     return this._url;
   }
 
-  constructor() { }
+  constructor(private router: Router, 
+     private route: ActivatedRoute,
+     private servicePets: PetsService) { }
 
   ngOnInit() {
+
+  }
+
+  verDetalhes(id) {
+    this.router.navigate(['detalhe', id], { relativeTo: this.route });
   }
 
 }

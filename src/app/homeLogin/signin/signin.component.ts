@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/auth/auth.service';
-import { Usuario } from 'src/app/homelogin/usuario';
+import { LoginForm } from 'src/app/homelogin/loginForm';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Usuario } from 'src/app/homelogin/usuario';
 })
 export class SigninComponent implements OnInit {
 
-  private usuario : Usuario = new Usuario;
+  private usuario : LoginForm = new LoginForm;
 
   constructor(private authSignin: AuthService) { }
 

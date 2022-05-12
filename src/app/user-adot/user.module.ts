@@ -5,12 +5,14 @@ import { UserComponent } from './user/user.component';
 import { UserAdotComponent } from './user-adot/user-adot.component';
 import { UserService } from './user.service';
 import { EnderecoComponent } from './endereco-user-adot/endereco.component';
+import { AdotTableComponent } from './adot-table/adot-table.component';
 
 @NgModule({
   declarations: [
     UserComponent,
     EnderecoComponent,
-    UserAdotComponent
+    UserAdotComponent,
+    AdotTableComponent
   ],
   imports: [
     CommonModule,

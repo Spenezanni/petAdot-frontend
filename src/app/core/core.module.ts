@@ -15,6 +15,7 @@ import { AlertModule } from '../shared/alert/alert.module';
     CommonModule,
     RouterModule,
     AlertModule
-  ]
+  ],
+  exports: [HeaderComponent]
 })
 export class CoreModule { }

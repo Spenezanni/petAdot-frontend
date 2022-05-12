@@ -1,11 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { UserAdot } from './userAdot';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getSexo(){
     return [
@@ -41,5 +44,10 @@ export class UserService {
     ];
   }
 
+  
+  listFromUser() {
+    console.log("entrei no serviço");
+    return this.http.get<UserAdot[]>(environment.API + 'userAdot')
+  }
 
 }

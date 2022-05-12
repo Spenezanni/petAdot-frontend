@@ -9,8 +9,9 @@ import { PhotosComponent } from './photo-list/photos/photos.component';
 import { CardModule } from '../shared/components/card/card.module';
 import { VmessageModule } from '../shared/components/vmessage/vmessage.module';
 import { LoadButtomComponent } from './photo-list/load-buttom/load-buttom.component';
-import { PetUnicComponent } from '../pets/pet-unic/pet-unic.component';
 import { PetTableComponent } from '../pets/pet-table/pet-table.component';
+import { PetUnic2Component } from './pet-unic2/pet-unic2.component';
+import { ModalAdotarComponent } from './modal-adotar/modal-adotar.component';
 
 
 @NgModule({
@@ -20,8 +21,9 @@ import { PetTableComponent } from '../pets/pet-table/pet-table.component';
     PhotoFormComponent,
     PhotosComponent,
     LoadButtomComponent,
-    PetUnicComponent,
-    PetTableComponent], 
+    PetTableComponent,
+    PetUnic2Component,
+    ModalAdotarComponent], 
   exports: [PhotoComponent],
 
   imports: [

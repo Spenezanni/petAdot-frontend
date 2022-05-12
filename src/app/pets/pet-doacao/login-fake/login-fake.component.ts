@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginForm } from 'src/app/homelogin/loginForm';
 
 @Component({
   selector: 'app-login-fake',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFakeComponent implements OnInit {
 
-  constructor() { }
+  private usuario : LoginForm = new LoginForm;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

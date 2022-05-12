@@ -1,90 +1,95 @@
 <div class="jumbotron border border-primary">
-<div class="alert alert-primary text-center h1 border border-primary" role="alert"> Pet Adot Cadastro </div>
-<div class="jumbotron border border-primary">
-    <form class="needs-validation" [formGroup]="form">
+    <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Pet Adot Cadastro </div>
+    <div class="jumbotron border border-primary">
+        <form class="needs-validation" [formGroup]="petForm">
 
-        <div class="form-row">
-            <div class="form-group col-md-6 pt-0">
-                <label for="nomeUsu">Nome do Pet</label>
-                <input type="text" class="form-control" id="nomeUsu"
-                    placeholder="Insira o nome do Pet" formControlName="nomeUsu">
+            <div class="form-row">
+                <div class="form-group col-md-6 pt-0">
+                    <label for="nomePet">Nome do Pet</label>
+                    <input type="text" class="form-control" id="nomePet" placeholder="Insira o nome do Pet"
+                        formControlName="nomePet">
+                </div>
+                <div class="form-group col-md-4 pt-0">
+                    <label for="idadePet">Idade do Pet</label>
+                    <input type="text" class="form-control" id="idadePet" placeholder="Insira a idade do Pet"
+                        formControlName="idadePet">
+                </div>
             </div>
-            <div class="form-group col-md-4 pt-0">
-                <label for="idadePet">Idade do Pet</label>
-                <input type="text" class="form-control" id="idadePet" placeholder="Insira a idade do Pet"
-                    formControlName="idadePet">
+            <div class="form-row">
+                <div class="form-group col-md-6 pt-0">
+                    <label for="raca">Raça do Pet</label>
+                    <input type="text" class="form-control" id="raca" placeholder="Insira a Raça do Pet"
+                        formControlName="raca">
+                </div>
             </div>
-        </div>
-        <br>  
-        <legend class="col-form-label col-sm-2 pt-0" [ngClass]="('sexo')">Sexo: </legend>
-        <div class="form-check"  id="sexo" *ngFor="let item of sexoOp" >
-            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="sexo"  
-            checked>
-            <label class="form-check-label" for="sexo" >
-                {{item.desc}}
-            </label>
-    </div> 
-        <br>
-        <legend class="col-form-label col-sm-2 pt-0">Especie: </legend>
-        <div class="form-check" id="especie" *ngFor="let item of especieOp">
-            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="especie" 
-                checked>
-            <label class="form-check-label" for="especie">
-                {{item.desc}}
-            </label>
             <br>
-        </div>
-        <br>
-        <legend class="col-form-label col-sm-2 pt-0">Porte: </legend>
-        <div class="form-check" *ngFor="let item of porteOp">
-            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="porte" id="porte" 
-                checked>
-            <label class="form-check-label" for="porte">
-                {{item.desc}}
-            </label>
-        </div>
-        <br>
-        <legend class="col-form-label col-sm-2 pt-0">Pelagem Tamanho: </legend>
-        <div class="form-check" *ngFor="let item of pelagemTamanhoOp">
-            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="pelagemTamanho" id="pelagemTamanho" 
-                checked>
-            <label class="form-check-label" for="pelagemTamanho">
-                {{item.desc}}
-            </label>
-        </div>
-        <br>
-        <legend class="col-form-label col-sm-2 pt-0">Pelagem Cor: </legend>
-        <div class="form-check" *ngFor="let item of pelagemCorOp">
-            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="pelagemCor" id="pelagemCor" 
-                checked>
-            <label class="form-check-label" for="exampleRadios1">
-                {{item.desc}}
-            </label>
-        </div>
-        <br>
-        
-        <legend class="col-form-label col-sm-2 pt-0 ">Castrado: </legend>
-        <div class="form-check" *ngFor="let item of castradoOp">
-            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="castrado" id="castrado" 
-                checked>
-            <label class="form-check-label" for="castrado">
-                {{item.desc}}
-            </label>
-        </div>
-        <br>
-
-        <legend class="col-form-label col-sm-2 pt-0">Vermifugado: </legend>
-        <div class="form-check" *ngFor="let item of vermificadoOp">
-            <input class="form-check-input" type="radio" [value]="item.valor" formControlName="vermificado" id="vermificado"
-                checked>
-            <label class="form-check-label" for="vermificado">
-                {{item.desc}}
-            </label>
+            <legend class="col-form-label col-sm-2 pt-0" [ngClass]="('sexo')">Sexo: </legend>
+            <div class="form-check" id="sexo" *ngFor="let item of sexoOp">
+                <input class="form-check-input" type="radio" [value]="item.valor" formControlName="sexo" checked>
+                <label class="form-check-label" for="sexo">
+                    {{item.desc}}
+                </label>
+            </div>
             <br>
-        </div>
-        <br>
+            <legend class="col-form-label col-sm-2 pt-0">Especie: </legend>
+            <div class="form-check" id="especie" *ngFor="let item of especieOp">
+                <input class="form-check-input" type="radio" [value]="item.valor" formControlName="especie" checked>
+                <label class="form-check-label" for="especie">
+                    {{item.desc}}
+                </label>
+                <br>
+            </div>
+            <br>
+            <legend class="col-form-label col-sm-2 pt-0">Porte: </legend>
+            <div class="form-check" *ngFor="let item of porteOp">
+                <input class="form-check-input" type="radio" [value]="item.valor" formControlName="porte" id="porte"
+                    checked>
+                <label class="form-check-label" for="porte">
+                    {{item.desc}}
+                </label>
+            </div>
+            <br>
+            <legend class="col-form-label col-sm-2 pt-0">Pelagem Tamanho: </legend>
+            <div class="form-check" *ngFor="let item of pelagemTamanhoOp">
+                <input class="form-check-input" type="radio" [value]="item.valor" formControlName="pelagemTamanho"
+                    id="pelagemTamanho" checked>
+                <label class="form-check-label" for="pelagemTamanho">
+                    {{item.desc}}
+                </label>
+            </div>
+            <br>
+            <legend class="col-form-label col-sm-2 pt-0">Pelagem Cor: </legend>
+            <div class="form-check" *ngFor="let item of pelagemCorOp">
+                <input class="form-check-input" type="radio" [value]="item.valor" formControlName="pelagemCor"
+                    id="pelagemCor" checked>
+                <label class="form-check-label" for="pelagemCor">
+                    {{item.desc}}
+                </label>
+            </div>
+            <br>
 
-        <legend class="col-form-label col-sm-2 pt-0">Status da Adoção: </legend>
+            <legend class="col-form-label col-sm-2 pt-0 ">Castrado: </legend>
+            <div class="form-check" *ngFor="let item of castradoOp">
+                <input class="form-check-input" type="radio" [value]="item.valor" formControlName="castrado"
+                    id="castrado" checked>
+                <label class="form-check-label" for="castrado">
+                    {{item.desc}}
+                </label>
+            </div>
+            <br>
+
+            <legend class="col-form-label col-sm-2 pt-0">Vermifugado: </legend>
+            <div class="form-check" *ngFor="let item of vermificadoOp">
+                <input class="form-check-input" type="radio" [value]="item.valor" formControlName="vermificado"
+                    id="vermificado" checked>
+                <label class="form-check-label" for="vermificado">
+                    {{item.desc}}
+                </label>
+                <br>
+            </div>
+            <br>
+
+            <!-- <legend class="col-form-label col-sm-2 pt-0">Status da Adoção: </legend>
         <div class="form-check" *ngFor="let item of statusAdocaoOp">
             <input class="form-check-input" type="radio" [value]="item.valor" formControlName="statusAdocao" id="statusAdocao"
                 checked>
@@ -92,34 +97,32 @@
                 {{item.desc}}
             </label>
             <br>
-        </div>
-        <br>
+        </div> -->
 
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="condSaude">Observação condição de saúde</label>
-                <input type="text" class="form-control" id="condSaude"
-                    placeholder="Insira condições de saúde" formControlName="condSaude">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="condSaude">Observação condição de saúde</label>
+                    <input type="text" class="form-control" id="condSaude" placeholder="Insira condições de saúde"
+                        formControlName="condSaude">
+                </div>
+
             </div>
-       
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="file">Insira uma foto do Pet</label>
-            <input type="file" 
-            class="form-control-file" 
-            id="file"
-            accept="image/*"
-            (change)="file = $event.target.files[0]">
-        </div>
+            <br>
+            <div class="form-group">
+                <label for="file">Insira uma foto do Pet</label>
+                <input type="file" class="form-control-file" formControlName="file" id="file" accept="image/*"
+                    (change)="$event">
+                <!-- (change)="handleFileSelect($event)" -->
+
+            </div>
 
 
-        <div>
-            <button type="submit" class="btn btn-primary" style="margin-right: 15px"
-                (click)="onSubmit()">Salvar</button>
-            <button type="button" class="btn btn-primary" style="margin-right: 15px"
-                (click)="onCancel()">Cancelar</button>
-        </div>
-    </form>
-</div>
+            <div>
+                <button type="submit" class="btn btn-primary" style="margin-right: 15px"
+                    (click)="onSubmit()">Salvar</button>
+                <button type="button" class="btn btn-primary" style="margin-right: 15px"
+                    (click)="onCancel()">Cancelar</button>
+            </div>
+        </form>
+    </div>
 </div>

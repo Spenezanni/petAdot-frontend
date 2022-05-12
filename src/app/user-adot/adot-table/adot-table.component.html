@@ -1,0 +1,41 @@
+<div class="jumbotron border border-primary">
+    <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Lista de Pet-Adot </div>
+
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users" class="col-4">
+                   
+                    <td>{{user.id}}</td>
+                    <td>{{user.user.nome}}</td>
+                    <td>{{user.sexo}}</td>
+                    <td>{{user.user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>
+                        <span class="float-right">
+                            <button class="btn btn-outline-primary mb-1 btn-sm" (click)="verDetalhes(photo.id)">
+                                Ver Detalhes
+                            </button>
+                            <!-- <button class="btn btn-outline-warning mb-1 btn-sm">
+                        User-Adot
+                    </button>
+                    <button class="btn btn-outline-warning mb-1 btn-sm">
+                        Cancelar
+                    </button> -->
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

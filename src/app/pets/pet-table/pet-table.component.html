@@ -1,5 +1,5 @@
 <div class="jumbotron border border-primary">
-    <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Pet Adot </div>
+    <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Lista de Pet-Adot </div>
 
     <div class="card-body">
         <table class="table table-hover">
@@ -14,14 +14,18 @@
             </thead>
             <tbody>
                 <tr *ngFor="let photo of photos" class="col-4">
-                    <td><img src="img-thumbnail data:imagem/jpg;base64">{{photo.image}}</td>
+                    <td>
+                        <div class="card" style="width: 02rem; height: 02rem;">
+                            <img src="{{'data:image/JPEG;base64,' + photo.imagem}}" class="card-img-top">
+                            </div>
+                    </td>
                     <td>{{photo.id}}</td>
                     <td>{{photo.nome}}</td>
                     <td>{{photo.sexo}}</td>
                     <td>{{photo.idade}}</td>
                     <td>
                         <span class="float-right">
-                            <button class="btn btn-outline-warning mb-1 btn-sm" (click)="verDetalhes(photo.id)">
+                            <button class="btn btn-outline-primary mb-1 btn-sm" (click)="verDetalhes(photo.id)">
                                 Ver Detalhes
                             </button>
                             <!-- <button class="btn btn-outline-warning mb-1 btn-sm">
@@ -36,4 +40,5 @@
             </tbody>
         </table>
     </div>
+
 </div>

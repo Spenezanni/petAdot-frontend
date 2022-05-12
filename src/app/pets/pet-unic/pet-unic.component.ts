@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Photo } from 'dist/app/photos/photo/photo';
+import { Photo } from 'src/app/photos/photo/photo';
+
 import { PetAdot } from '../petAdot';
 import { PetsService } from '../pets.service';
 
@@ -26,8 +27,7 @@ export class PetUnicComponent implements OnInit {
         console.log(id);  
         const photo$ =  this.servicePets.loadPetById(id);
          
-        photo$.subscribe(photo => {
-        })
+        photo$.subscribe(data => this.photo = data)
         console.log(photo$);
         console.log("passei no serviço");
       }

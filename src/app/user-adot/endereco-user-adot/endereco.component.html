@@ -1,4 +1,4 @@
-<div class="jumbotron border border-primary">
+<div class="jumbotron border border-primary" id="jumbotron1">
     <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Endereço do Usuário </div>
 <div class="jumbotron border border-primary">
     <form class="needs-validation" [formGroup]="formEndereco">
@@ -42,8 +42,8 @@
     </div>
 </div>
 <div>
-    <button type="submit" class="btn btn-primary" style="margin-right: 15px" (click)="onNext()">Próximo</button>
     <button type="submit" class="btn btn-primary" style="margin-right: 15px" (click)="onBack()">Voltar</button>
+    <button type="submit" class="btn btn-primary" style="margin-right: 15px" (click)="onNext()">Próximo</button>
 </div>
     </form>
     </div>

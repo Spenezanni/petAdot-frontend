@@ -1,5 +1,5 @@
 
-<div class="jumbotron border border-primary">
+<div class="jumbotron border border-primary" id="jumbotron1">
     <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Pet Adot </div>
     <form class="needs-validation" [formGroup]="pesquisa">
 <div class="form-row">
@@ -42,7 +42,8 @@
         [nome]="photo.nome"
         [sexo]="photo.sexo"
         [porte]="photo.porte"
-        [idade]="photo.idade">
+        [idade]="photo.idade"
+        [id]="photo.id">
     </app-photo>
 </div>
     </li>   

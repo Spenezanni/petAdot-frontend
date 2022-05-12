@@ -1,10 +1,11 @@
 
 
-<div class="jumbotron border border-primary">
+<div class="jumbotron border border-primary" style="text-align: center;" >
 <img class="img-thumbnail" [src]="url" alt="nome" >
 <h2>{{nome}}</h2>
 <p>Sexo: {{sexo}}</p> <p>Porte: {{porte}}</p>
 <p>Idade: {{idade}} </p>
-<button type="button" class="btn btn-outline-success" id="button1">Adotar</button>
-<button type="button" class="btn btn-outline-warning" id="button2">Detalhes</button>
+
+
+<button type="button" class="btn btn-primary" id="button2" (click)="verDetalhes(id)">Detalhes</button>
 </div>

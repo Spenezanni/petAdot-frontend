@@ -21,11 +21,18 @@ import { PetsModule } from './pets/pets.module';
 import { PortalModule } from './portais/portal.module';
 import { UserModule } from './user-adot/user.module';
 import { UserFuncModule } from './user-func/user-func.module';
+import { MenuComponent } from './menu/menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { UserService } from './core/user/user.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ApresentacaoComponent
+    ApresentacaoComponent,
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -43,13 +50,15 @@ import { UserFuncModule } from './user-func/user-func.module';
     HomeModule,
     PortalModule,
     UserModule,
-    UserFuncModule
+    UserFuncModule,
+    BrowserAnimationsModule
   ],
   providers: [
     UsuarioCadastroService,
     AuthService,
     SigninService,
-    AuthGuard
+    AuthGuard,
+    UserService
   ],
   bootstrap:[AppComponent]
 })

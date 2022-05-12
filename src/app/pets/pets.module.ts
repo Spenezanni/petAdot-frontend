@@ -9,6 +9,7 @@ import { PhotosModule } from '../photos/photos.module';
 import { PetDoacaoComponent } from './pet-doacao/pet-doacao.component';
 import { RouterModule } from '@angular/router';
 import { LoginFakeComponent } from './pet-doacao/login-fake/login-fake.component';
+import { PetUnicComponent } from './pet-unic/pet-unic.component';
 
 
 
@@ -18,7 +19,8 @@ import { LoginFakeComponent } from './pet-doacao/login-fake/login-fake.component
     PetAtualizarComponent,
     PetAtualizarDescComponent,
     PetDoacaoComponent,
-    LoginFakeComponent
+    LoginFakeComponent,
+    PetUnicComponent
   ],
   imports: [
     CommonModule,

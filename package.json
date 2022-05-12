@@ -27,6 +27,8 @@
     "highcharts": "^8.2.2",
     "highcharts-angular": "^2.8.2",
     "jquery": "^3.4.1",
+    "jwt-decode": "^2.2.0",
+    "ngx-bootstrap": "^8.0.0",
     "popper.js": "^1.15.0",
     "primeicons": "^5.0.0",
     "primeng": "^13.3.0",
