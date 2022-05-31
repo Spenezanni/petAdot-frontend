@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+
 import { HomeComponent } from './home/home.component';
 import { UsuarioComponent } from './usuario-master/usuario/usuario.component';
 
@@ -34,6 +33,8 @@ import { AdotUnicComponent } from './user-adot/adot-unic/adot-unic.component';
 import { PetPesquisarComponent } from './pets/pet-pesquisar/pet-pesquisar.component';
 import { EnderecoFuncComponent } from './user-func/endereco-func/endereco-func.component';
 import { AdotFuncTableComponent } from './user-func/adot-func-table/adot-func-table.component';
+import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 
 const routes: Routes = [

@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PhotoService } from 'dist/app/photos/photo.service';
 import { Photo } from 'dist/app/photos/photo/photo';

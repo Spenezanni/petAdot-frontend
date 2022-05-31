@@ -1,10 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { UsuarioCadastroService } from './usuario-master/usuario-cadastro/usuario-cadastro.service';
 import { HomeloginModule } from './homeLogin/homelogin.module';
 import { AuthService } from './core/auth/auth.service';
@@ -22,10 +18,12 @@ import { PortalModule } from './portais/portal.module';
 import { UserModule } from './user-adot/user.module';
 import { UserFuncModule } from './user-func/user-func.module';
 import { MenuComponent } from './menu/menu.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { UserService } from './core/user/user.service';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 
 
 @NgModule({
@@ -51,8 +49,7 @@ import { UserService } from './core/user/user.service';
     HomeModule,
     PortalModule,
     UserModule,
-    UserFuncModule,
-    BrowserAnimationsModule
+    UserFuncModule
   ],
   providers: [
     UsuarioCadastroService,
