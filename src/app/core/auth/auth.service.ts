@@ -42,28 +42,29 @@ export class AuthService {
   fazerLoginLoiane(usuario: LoginForm){
 
   }
+  //'multipart/form-data; charset=utf-8'
 
-  fazerLoginAlura(usuario: LoginForm){
+  fazerLoginAlura(form){
+    
     const httpOptions = {
       headers: new HttpHeaders({
-
+        'Content-Type': 'application/json'
       }),
-      body: usuario
+      body: form
     };
-    console.log(usuario)
-     return this.http.post(`${environment.API}auth`, usuario);
-    //.pipe(tap(
-      //res => {
-        //const authToken = res.headers.get('x-access-token');
-       // console.log("authToken");
-        //window.localStorage.setItem('authToken', authToken);
-       // console.log("authToken");
-       // this.tokenService.setToken(authToken);
-       // console.log(authToken);
-       // console.log("authToken");
-     // }
-    //)); 
+    
+    console.log(form)
+     return this.http.post(`${environment.API}auth`, form, {observe: 'response'})
+    .pipe(tap(
+      res => {
+        const authToken = res.headers.get('x-access-token');
+        console.log("authToken");
+        window.localStorage.setItem('authToken', authToken);
+        console.log("authToken");
+        this.tokenService.setToken(authToken);
+        console.log(authToken);
+        console.log("authToken");
+      }
+    )); 
   }
-
-
 }

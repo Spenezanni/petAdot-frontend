@@ -1,0 +1,18 @@
+<body>
+    <div class="jumbotron border border-primary">
+        <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Pesquisar Pet por Id</div>
+        <div class="jumbotron border border-primary">
+            <div class="form-row">
+                <div class="form-group col-md-6 pt-0">
+                    <label for="id">Id do Pet</label>
+                    <input type="text" class="form-control" id="id" #id placeholder="Insira o Id do Pet">
+                    <br><br>
+                    <div>
+                        <button type="submit" class="btn btn-primary" style="margin-right: 15px"
+                            (click)="onSubmit(id.value)">Pesquisar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

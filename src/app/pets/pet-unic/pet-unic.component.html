@@ -1,4 +1,5 @@
 
+<body>
 <div class="jumbotron border border-primary" style="text-align: center;">
 
 
@@ -16,8 +17,9 @@
     <p>Condição de Saúde: {{photo.condicaoSaude}}</p>
 
     <button type="button" class="btn btn-outline-success" id="button1">Atualizar</button>
-    <button type="button" class="btn btn-outline-warning" id="button2">Adotadores</button>
-    <button type="button" class="btn btn-outline-danger" id="button3">Deletar Pet</button>
+    <button type="button" class="btn btn-outline-warning" id="button2" (click)="verAdotadores(photo.id)">Adotadores</button>
+    <button type="button" class="btn btn-outline-danger" id="button3">Deletar</button>
 
+</div>
 </div>
     

@@ -21,6 +21,24 @@ export class AdotTableComponent implements OnInit {
     this.userService.listFromUser()
       .subscribe(users => this.users = users);
     console.log(this.users);
+
+    this.route.params.subscribe(
+      (params: any) => {
+        const id = params['id'];
+        console.log(id);
+        const users$ = this.userService.loadListUsersByIdPet(id);
+
+        users$.subscribe(data => this.users = data)
+        console.log(users$);
+        console.log("passei no serviço");
+      }
+    );
+
+
+  }
+
+  verDetalhes(cpf) {
+    this.router.navigate(['detalhe', cpf], { relativeTo: this.route });  
   }
 
 }

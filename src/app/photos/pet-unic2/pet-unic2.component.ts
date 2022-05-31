@@ -5,6 +5,8 @@ import { PetAdot } from 'src/app/pets/petAdot';
 import { PhotoService } from '../photo.service';
 import { Photo } from '../photo/photo';
 
+
+
 @Component({
   selector: 'app-pet-unic2',
   templateUrl: './pet-unic2.component.html',
@@ -27,7 +29,7 @@ export class PetUnic2Component implements OnInit {
         const id = params['id'];
         console.log(id);  
         const photo$ =  this.servicePhoto.loadPetById(id);
-
+        
         photo$.subscribe(data => this.photo = data)
         console.log(photo$);
         console.log("passei no serviço");
@@ -35,5 +37,7 @@ export class PetUnic2Component implements OnInit {
       }
     ); 
   }
+
+
 
 }

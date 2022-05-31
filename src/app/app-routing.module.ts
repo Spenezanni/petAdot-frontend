@@ -30,6 +30,10 @@ import { LoginFakeComponent } from './pets/pet-doacao/login-fake/login-fake.comp
 import { PetUnic2Component } from './photos/pet-unic2/pet-unic2.component';
 import { LoginComponent } from './login/login.component';
 import { AdotTableComponent } from './user-adot/adot-table/adot-table.component';
+import { AdotUnicComponent } from './user-adot/adot-unic/adot-unic.component';
+import { PetPesquisarComponent } from './pets/pet-pesquisar/pet-pesquisar.component';
+import { EnderecoFuncComponent } from './user-func/endereco-func/endereco-func.component';
+import { AdotFuncTableComponent } from './user-func/adot-func-table/adot-func-table.component';
 
 
 const routes: Routes = [
@@ -46,6 +50,7 @@ const routes: Routes = [
   { path: 'pet-atualizar-desc', component: PetAtualizarDescComponent },
   { path: 'pet-lista', component: PhotoListComponent },
   { path: 'doacao-pet', component: PetDoacaoComponent },
+  { path: 'pet-pesquisa', component: PetPesquisarComponent },
 
   { path: 'quemSomos', component: ApresentacaoComponent }, 
   { path: 'cadastroAcesso', component: UsuarioAcessoComponent },
@@ -61,8 +66,9 @@ const routes: Routes = [
   { path: 'endereco', component: EnderecoComponent },
 
   { path: 'user-func', component: UserFuncComponent },
-  { path: 'endereco-func', component: EnderecoComponent },
+  { path: 'endereco-func', component: EnderecoFuncComponent },
   { path: 'user-func-comp', component: UserFuncComponent },
+  {path: 'user-func-table', component: AdotFuncTableComponent},
   { path: 'pet-table', component: PetTableComponent },
   { path: 'user-table', component: AdotTableComponent },
   { path: 'graficoAnalise', component: GraficoAnaliseComponent },
@@ -70,6 +76,9 @@ const routes: Routes = [
 
   {path: 'pet-table/detalhe/:id', component: PetUnicComponent},
   {path: 'pet-lista/detalhe/:id', component: PetUnic2Component},
+  {path: 'pet-pesquisa/detalhe/:id', component: PetUnicComponent},
+  {path: 'pet-pesquisa/detalhe/:id/adotadores/:id', component: AdotTableComponent},
+  {path: 'user-table/detalhe/:cpf', component: AdotUnicComponent},
 
   { path: '**', component: NotFoundComponent }
   

@@ -4,9 +4,8 @@ import { VmessageComponent } from './components/vmessage/vmessage.component';
 
 
 @NgModule({
-  declarations: [
-
-  ],
+  declarations: [],
+  exports:[],
   imports: [
     CommonModule,
     

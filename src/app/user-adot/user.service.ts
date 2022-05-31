@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { take } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { UserAdot } from './userAdot';
 
@@ -48,6 +49,19 @@ export class UserService {
   listFromUser() {
     console.log("entrei no serviço");
     return this.http.get<UserAdot[]>(environment.API + 'userAdot')
+  }
+
+  loadUserAdotById(cpf) {
+    return this.http.get<UserAdot>(`${environment.API}userAdot/${cpf}`).pipe(take(1)); 
+  }
+
+  loadListUsersByIdPet(id){
+    return this.http.get<UserAdot[]>(`${environment.API}petAdot/list-userAdot/${id}`).pipe(take(1));
+  }
+
+  listFromUserFunc(){
+    console.log("entrei no serviço");
+    return this.http.get<UserAdot[]>(environment.API + 'user')
   }
 
 }

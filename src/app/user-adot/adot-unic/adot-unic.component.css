@@ -1,8 +1,12 @@
-#jumbotron1{
+.jumbotron{
     margin-top: 60px;
+}
+
+
+#button2 {
+    margin: 0 30px;
 }
 
 body {
     background-color: rgb(228, 98, 228);
   }
-

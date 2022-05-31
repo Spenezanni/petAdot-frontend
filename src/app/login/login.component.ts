@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../core/auth/auth.service';
 import { LoginForm } from './loginForm';
 
@@ -9,21 +11,25 @@ import { LoginForm } from './loginForm';
 })
 export class LoginComponent implements OnInit {
 
-  private usuario: LoginForm = new LoginForm()
+  formLogin: FormGroup;
 
-  constructor(private authService: AuthService) { }
+  private form: LoginForm = new LoginForm()
+
+  constructor(private authService: AuthService, private router: Router, 
+    private formBuilder: FormBuilder,) { }
 
   ngOnInit() {
+
   }
 
-  fazerLogin(usuario: LoginForm){
-     this.authService.fazerLoginAlura(usuario).subscribe(
+  fazerLogin(form){
+     this.authService.fazerLoginAlura(form).subscribe(
        () => console.log('Autenticado com sucesso'),
        err => {
          console.log(err);
        }
      );
-    console.log(this.usuario)
+    console.log(this.form)
   }
 
 }

@@ -1,28 +1,27 @@
-<div class="jumbotron border border-primary">
-    <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Lista de Pet-Adot </div>
+<body><div class="jumbotron border border-primary">
+    <div class="alert alert-primary text-center h1 border border-primary" role="alert"> Lista de Adotadores </div>
 
     <div class="card-body">
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Nome</th>
                     <th>Sexo</th>
                     <th>Email</th>
                     <th>Telefone</th>
+                    <th>CPF</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let user of users" class="col-4">
-                   
-                    <td>{{user.id}}</td>
                     <td>{{user.user.nome}}</td>
                     <td>{{user.sexo}}</td>
                     <td>{{user.user.email}}</td>
                     <td>{{user.phone}}</td>
+                    <td>{{user.cpf}}<td>
                     <td>
                         <span class="float-right">
-                            <button class="btn btn-outline-primary mb-1 btn-sm" (click)="verDetalhes(photo.id)">
+                            <button class="btn btn-outline-primary mb-1 btn-sm" (click)="verDetalhes(user.cpf)">
                                 Ver Detalhes
                             </button>
                             <!-- <button class="btn btn-outline-warning mb-1 btn-sm">
@@ -39,3 +38,4 @@
     </div>
 
 </div>
+</body>
