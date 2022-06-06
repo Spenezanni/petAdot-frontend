@@ -10,7 +10,7 @@ export interface UserAdot{
         statusAdocao: string,
         quantFilhos: string,
         tipoResidencia: string
-    User :{
+    user :{
     id: number,
     nome: string,
     sobreNome: string,
@@ -18,7 +18,7 @@ export interface UserAdot{
 
     }
 
-    Endereco:{
+    endereco :{
         logradouro: string,
         numero: string,
         bairro: string,

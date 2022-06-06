@@ -1,7 +1,6 @@
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsuarioCadastroService } from './usuario-master/usuario-cadastro/usuario-cadastro.service';
 import { HomeloginModule } from './homeLogin/homelogin.module';
 import { AuthService } from './core/auth/auth.service';
 import { SigninService } from './homeLogin/signin/signin.service';
@@ -11,7 +10,6 @@ import { GraficosModule } from './graficos/graficos.module';
 import { PhotosModule } from './photos/photos.module';
 import { ErrorsModule } from './errors/errors.module';
 import { HomeModule } from './home/home.module';
-import { UsuarioMasterModule } from './usuario-master/usuario-master.module';
 import { ApresentacaoComponent } from './apresentacao/apresentacao.component';
 import { PetsModule } from './pets/pets.module';
 import { PortalModule } from './portais/portal.module';
@@ -24,6 +22,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -40,7 +40,6 @@ import { NgModule } from '@angular/core';
     AppRoutingModule,
     HttpClientModule,
     HomeloginModule,
-    UsuarioMasterModule,
     PetsModule,
     CoreModule,
     GraficosModule,
@@ -49,10 +48,11 @@ import { NgModule } from '@angular/core';
     HomeModule,
     PortalModule,
     UserModule,
-    UserFuncModule
+    UserFuncModule,
+    SharedModule,
+    ModalModule.forRoot()
   ],
   providers: [
-    UsuarioCadastroService,
     AuthService,
     SigninService,
     AuthGuard,

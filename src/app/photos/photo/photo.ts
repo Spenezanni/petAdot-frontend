@@ -12,7 +12,8 @@ export interface Photo{
         "pelagemCor": string,
         "vermificacao": string,
         "castrado": string,
-        "statusAdocao": string
+        "statusAdocao": string,
+        "imagem": any;
 
   /* id: number;
     postDate: Date;

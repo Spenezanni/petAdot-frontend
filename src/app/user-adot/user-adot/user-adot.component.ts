@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { AlertModalComponent } from 'src/app/shared/alert-modal/alert-modal.component';
 import { UserService } from '../user.service';
 
 @Component({
@@ -9,6 +11,8 @@ import { UserService } from '../user.service';
   styleUrls: ['./user-adot.component.css']
 })
 export class UserAdotComponent implements OnInit {
+
+  bsModalRef: BsModalRef;
 
   form2: FormGroup;
 
@@ -19,7 +23,7 @@ export class UserAdotComponent implements OnInit {
 
   constructor(private userService: UserService, 
     private router: Router, 
-    private formBuilder: FormBuilder,) { }
+    private formBuilder: FormBuilder, private modalService: BsModalService) { }
 
   ngOnInit() {
     this.moradiaOp = this.userService.getMoradia();
@@ -46,6 +50,17 @@ export class UserAdotComponent implements OnInit {
 
   onNext(){
 
+  }
+  
+  handle() {
+    this.bsModalRef = this.modalService.show(AlertModalComponent);
+    this.bsModalRef.content.type = 'success';
+    this.bsModalRef.content.message = 'User-Adot creado com sucesso!';
+    this.bsModalRef.content.message2 = '';
+  }
+
+  onSuccess() {
+    this.handle();
   }
 
 }

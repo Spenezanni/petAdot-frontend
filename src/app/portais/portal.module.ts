@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PortalComponent } from './portal/portal.component';
 import { RouterModule } from '@angular/router';
+import { LoginPortalComponent } from './login-portal/login-portal.component';
+import { PortalComponent } from './portal/portal.component';
 
 @NgModule({
   declarations: [
-    PortalComponent
+    PortalComponent,
+    LoginPortalComponent
   ],
   imports: [
     CommonModule,

@@ -20,4 +20,12 @@ export class PetAtualizarComponent implements OnInit {
     this.router.navigate(['pet-atualizar-desc']);
   }
 
+  onBack(){
+
+  }
+
+  onCancel(){
+    
+  }
+
 }

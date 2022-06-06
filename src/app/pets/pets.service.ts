@@ -73,12 +73,14 @@ export class PetsService {
   }
 
   createPet(formData){
+    console.log(formData);
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'multipart/form-data; charset=utf-8'
+        'Content-Type': 'multipart/form-data; charset=utf-8',
+        body: formData
       })
     };
-    return this.http.post(environment.API + 'petAdot/create-pet-adot', formData).pipe(take(1));
+    return this.http.post(environment.API + 'petAdot/create-pet-adot', httpOptions).pipe(take(1));
 
   }
 

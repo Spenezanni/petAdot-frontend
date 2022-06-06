@@ -10,7 +10,7 @@ import { LoginForm } from 'src/app/homelogin/loginForm';
 })
 export class SigninComponent implements OnInit {
 
-  private usuario : LoginForm = new LoginForm;
+  public usuario : LoginForm = new LoginForm;
 
   constructor(private authSignin: AuthService) { }
 

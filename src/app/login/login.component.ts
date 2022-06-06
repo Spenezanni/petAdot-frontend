@@ -13,23 +13,24 @@ export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
 
-  private form: LoginForm = new LoginForm()
+  public form: LoginForm = new LoginForm()
 
   constructor(private authService: AuthService, private router: Router, 
-    private formBuilder: FormBuilder,) { }
+    private formBuilder: FormBuilder) { }
 
   ngOnInit() {
 
   }
 
-  fazerLogin(form){
-     this.authService.fazerLoginAlura(form).subscribe(
-       () => console.log('Autenticado com sucesso'),
-       err => {
-         console.log(err);
-       }
-     );
-    console.log(this.form)
+  fazerLogin(){
+    //  this.authService.fazerLoginAlura(form).subscribe(
+    //    () => console.log('Autenticado com sucesso'),
+    //    err => {
+    //      console.log(err);
+    //    }
+    //  );
+    // console.log(this.form)
+    
   }
 
 }

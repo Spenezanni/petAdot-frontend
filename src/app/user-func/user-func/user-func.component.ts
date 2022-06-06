@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { AlertModalComponent } from 'src/app/shared/alert-modal/alert-modal.component';
 import { UserFuncService } from '../user-func.service';
 
 @Component({
@@ -9,8 +11,10 @@ import { UserFuncService } from '../user-func.service';
 })
 export class UserFuncComponent implements OnInit {
 
+  bsModalRef: BsModalRef;
+
   constructor(private router: Router,
-    private userFuncService: UserFuncService) { }
+    private userFuncService: UserFuncService, private modalService: BsModalService) { }
 
   ngOnInit() {
   }
@@ -21,6 +25,17 @@ export class UserFuncComponent implements OnInit {
 
   onBack(){
     this.router.navigate(['/home']);
+  }
+
+  handle() {
+    this.bsModalRef = this.modalService.show(AlertModalComponent);
+    this.bsModalRef.content.type = 'success';
+    this.bsModalRef.content.message = 'Usuário colaborador criado com sucesso!';
+    this.bsModalRef.content.message2 = '';
+  }
+
+  onSuccess() {
+    this.handle();
   }
 
 

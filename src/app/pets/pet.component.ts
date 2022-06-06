@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { AlertModalComponent } from '../shared/alert-modal/alert-modal.component';
 import { PetsService } from './pets.service';
 
 
@@ -29,10 +31,13 @@ export class PetComponent implements OnInit {
   isImageSaved: boolean;
   base64textString: string;
 
+  
+  bsModalRef: BsModalRef;
+
   constructor(private router: Router, 
     private formBuilder: FormBuilder,
     private petService: PetsService,
-    private http: HttpClient) { }
+    private http: HttpClient, private modalService: BsModalService) { }
 
   ngOnInit() {
     this.sexoOp = this.petService.getSexo();
@@ -63,7 +68,7 @@ export class PetComponent implements OnInit {
 
   onSubmit(){
     const formData = new FormData(); 
-    formData.append('file', this.petForm.value.file);
+    formData.append('file', this.base64textString);
     formData.append('sexo', this.petForm.value.sexo);
     formData.append('especie', this.petForm.value.especie);
     formData.append('porte', this.petForm.value.porte);
@@ -93,11 +98,25 @@ export class PetComponent implements OnInit {
   }
 }
 
-
 _handleReaderLoaded(readerEvt) {
    var binaryString = readerEvt.target.result;
           this.base64textString= btoa(binaryString);
           console.log(btoa(binaryString));
+  }
+
+  onCancel(){
+    
+  }
+
+  handle() {
+    this.bsModalRef = this.modalService.show(AlertModalComponent);
+    this.bsModalRef.content.type = 'success';
+    this.bsModalRef.content.message = 'Cadastro do pet realizado com sucesso!';
+    this.bsModalRef.content.message2 = '';
+  }
+
+  onSuccess() {
+    this.handle();
   }
 
 

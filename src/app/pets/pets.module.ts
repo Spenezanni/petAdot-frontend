@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import { PetComponent } from './pet.component';
 import { PetAtualizarComponent } from './pet-atualizar/pet-atualizar.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { PetAtualizarDescComponent } from './pet-atualizar-desc/pet-atualizar-desc.component';
 import { PetsService } from './pets.service';
 import { PhotosModule } from '../photos/photos.module';
 import { PetDoacaoComponent } from './pet-doacao/pet-doacao.component';
 import { RouterModule } from '@angular/router';
-import { LoginFakeComponent } from './pet-doacao/login-fake/login-fake.component';
+import { LoginDoacaoComponent } from './pet-doacao/login-doacao/login-doacao.component';
 import { PetUnicComponent } from './pet-unic/pet-unic.component';
 import { PetPesquisarComponent } from './pet-pesquisar/pet-pesquisar.component';
 
@@ -18,9 +17,8 @@ import { PetPesquisarComponent } from './pet-pesquisar/pet-pesquisar.component';
   declarations: [
     PetComponent,
     PetAtualizarComponent,
-    PetAtualizarDescComponent,
     PetDoacaoComponent,
-    LoginFakeComponent,
+    LoginDoacaoComponent,
     PetUnicComponent,
     PetPesquisarComponent
   ],

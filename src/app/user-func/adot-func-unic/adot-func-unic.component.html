@@ -2,15 +2,15 @@
 <body>
     <div class="jumbotron border border-primary" style="text-align: center;">
     
-        <h2>Nome: {{user.user.nome}} {{user.user.sobreNome}}</h2>
-        <p>E-mail: {{user.user.email}}</p>
-        <p>CPF: {{user.cpf}}</p>
-        <p>RG: {{user.rg}}</p>
-        <p>Sexo: {{user.sexo}}</p> 
-        <p>Estado Civil: {{user.estadoCivil}}</p>
-        <p>Telefone: {{user.phone}} </p>
-        <p>Tipo de Residência: {{user.tipoResidencia}}</p>
-        <p>Status: {{user.statusAdocao}}</p>
+        <h2>Nome: {{ user.user.nome }} {{user.user.sobreNome}}</h2>
+        <p>E-mail: {{ user.user.email }}</p>
+        <p>CPF: {{ user.cpf }}</p>
+        <p>RG: {{ user.rg }}</p>
+        <p>Sexo: {{ user.sexo }}</p> 
+        <p>Estado Civil: {{ user.estadoCivil }}</p>
+        <p>Telefone: {{ user.phone }} </p>
+        <p>Tipo de Residência: {{ user.tipoResidencia }}</p>
+        <p>Status: {{ user.statusAdocao }}</p>
     
         <button type="button" class="btn btn-outline-success" id="button2">Atualizar</button>
         <button type="button" class="btn btn-outline-danger" id="button3">Deletar</button>
@@ -21,12 +21,12 @@
     <div class="jumbotron border border-primary" style="text-align: center;">
     
         <h2>Endereço</h2>
-        <p>Logradouro: {{user.endereco.logradouro}}</p>
-        <p>Numero: {{user.endereco.numero}}</p> 
-        <p>Bairro: {{user.endereco.bairro}} </p>
-        <p>Cidade: {{user.endereco.cidade}}</p> 
-        <p>Estado: {{user.endereco.estado}}</p> 
-        <p>Cep: {{user.endereco.cep}}</p> 
+        <p>Logradouro: {{ user.endereco.logradouro }}</p>
+        <p>Numero: {{ user.endereco.numero }}</p> 
+        <p>Bairro: {{ user.endereco.bairro }} </p>
+        <p>Cidade: {{ user.endereco.cidade }}</p> 
+        <p>Estado: {{ user.endereco.estado }}</p> 
+        <p>Cep: {{ user.endereco.cep }}</p> 
     
     </div>
     </body>

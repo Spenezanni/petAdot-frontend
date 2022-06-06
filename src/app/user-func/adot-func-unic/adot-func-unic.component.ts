@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserAdot } from 'src/app/user-adot/userAdot';
 
 @Component({
   selector: 'app-adot-func-unic',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adot-func-unic.component.css']
 })
 export class AdotFuncUnicComponent implements OnInit {
+
+  user: UserAdot;
 
   constructor() { }
 
